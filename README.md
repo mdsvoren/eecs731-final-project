@@ -1,7 +1,25 @@
-# Final Project
+# EECS 731 - Final Project
 
 Reducing clothing return rates by optimizing size recommendations.
 https://www.kaggle.com/rmisra/clothing-fit-dataset-for-size-recommendation#renttherunway_final_data.json
+
+## Team Members
+* Andre Kurait
+* Michael Svoren
+* Melody Yu
+* Daniel Zolotor
+* Thor Lyche
+* Alex Kunz
+
+## Project Goal
+Using a dataset from RentTheRunway which consists of customer reviews for various products, use data science techniques and machine learning models to derive value from the data in three ways:
+
+1. Anomaly Detection - Remove misleading data and data which will substantially reduce the accuracy of and diminish the value of the following two models.
+
+2. Classification - Determine if a certain size will fit, be too large, or be too small for a user, given their body type details.
+
+2. Clustering - Recommend the most relevant products based on body type and purpose for shopping.
+
 
 ## Project Organization
 ```bash
@@ -12,20 +30,19 @@ https://www.kaggle.com/rmisra/clothing-fit-dataset-for-size-recommendation#rentt
 │   ├── bra_sizes.csv
 │   ├── category_encoding.pkl
 │   ├── rented_for_encoding.pkl
-│   ├── renttherunway_final_data.json
+│   ├── reviews.pkl
 │   ├── renttherunway_final_data.pkl
-│   └── reviews.pkl
+│   └── reviews_anomalies_removed.pkl
 └── notebooks
     └── Feature_Engineering.ipynb
 ```
 
-## Project Foci
-* Classification - User puts in data and we'll return whether we think the product will fit them, be too small, or be too large. - Thor and Alex
-* Martin recommended thinking about should RentTheRunWay not recommend certain projects (if similar people report different fits, then we might not want to reccommend this to others because return rate is likely higher) - grouped under Clustering
-* Anomaly Detection - Use to clean data of user typos - Daniel and Melody
-* Clustering - Recommend products that are for similar occassions and are recent (date) - Michael and Andre
 
-## Notes from Martin
-* Mention things that we considered, but didn't do.
-* Discuss why we chose each in depth
-* 20 - 25 minutes presentation 
+## Project code
+The code exists on Jupyter notebooks in the notebooks folder. All the data is held in the data folder. A more detailed project organization is above.
+
+### Installation
+To run the python code, download the zip file of this project. The notebooks have embedded outputs of the code that was run previously on kernels.
+
+### Models
+Multiple SKLearn models for classification, anomaly detection, and clustering were used primarily in this project. Additionally, statistical methods such as the three sigma approach were employed.
